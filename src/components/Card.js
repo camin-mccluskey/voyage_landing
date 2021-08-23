@@ -1,9 +1,10 @@
-const Card = ({icon, title, valueProp}) => {
+const Card = ({icon, title, problemText, solutionText}) => {
   return (
-    <div className="">
-      <img/>
-      <h3>{title}</h3>
-      <p>{valueProp}</p>
+    <div>
+      <img src={icon}/>
+      <h3 className="text-center">{title}</h3>
+      <p className="text-center">{problemText}</p>
+      <p className="text-center">{solutionText}</p>
     </div>
   )
 };
