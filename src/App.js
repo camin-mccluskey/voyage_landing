@@ -3,7 +3,6 @@ import data from './Data';
 import { Card } from './components';
 import WhitePaperPdf from './assets/files/voyage_white_paper_test.pdf';
 import ReactTwitchEmbedVideo from "react-twitch-embed-video"
-import { forEach } from 'lodash';
 
 
 function App() {
@@ -12,17 +11,17 @@ function App() {
     <div className="App px-8">
       {/* Header */}
       <div className="flex flex-row justify-between py-2">
-        <h1 className="text-center">
+        <h1 className="text-center cursor-default">
           Voyage
         </h1>
-        <a href={WhitePaperPdf} target="_blank">White Paper</a>
+        <a className="py-4 cursor-pointer text-blue-500 underline" href={WhitePaperPdf} target="_blank" rel="noreferrer">White Paper</a>
       </div>
       {/* Hero Value Text */}
       <p className="text-xl text-center py-12">
         {hero_text}
       </p>
       {/* Value Prop Cards */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mx-auto py-10">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 mx-auto py-10">
         {problem_value_cards.map((c, idx) => {
           return <Card icon={c.icon} title={c.title} problemText={c.problem_text} solutionText={c.solution_text}/>
         })}
@@ -30,27 +29,19 @@ function App() {
       {/* Graph Image */}
       {/* Core Principles */}
       <div className="py-10">
-        <h2 className="py-2">Core Principles</h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
-          <div>
-            <p>We listen to understand, not to reply</p>
-          </div>
-          <div>
-            <p>We speak to each other, not past</p>
-          </div>
-          <div>
-            <p>We reward authentic conversations, not hot takes</p>
-          </div>
-          <div>
-            <p>We treat individuals with respect, but their ideas with scrutiny</p>
-          </div>
-          <div>
-            <p>We promote a sensible level of conspiracy theorizing</p>
-          </div>
+        <h2 className="py-2 underline">Core Principles</h2>
+        <div className="flex justify-center flex-wrap gap-4">
+          {core_principles.map((p, idx) => {
+            return (
+                <div className="border-2 p-4 md:w-2/12 xs:w-1/3">
+                  <p className="text-center">{p}</p>
+                </div>
+            )
+          })}
         </div>
       </div>
       {/* Reserve a username */}
-      <div className="mx-auto w-2/4 border-2">
+      <div className="mx-auto w-fill md:w-2/4 border-2">
         <h3 className="text-center">Reserve a Username</h3>
         // todo
         {/* do it using this - https://medium.com/weekly-webtips/simple-react-contact-form-without-back-end-9fa06eff52d9 */}
@@ -63,7 +54,7 @@ function App() {
       {/* Twitch Embed */}
       <div className="py-10">
         <h2 className="text-center">We're Building in Public!</h2>
-        <div className="w-screen md:w-9/12 mx-auto">
+        <div className="w-full md:w-9/12 mx-auto">
           <ReactTwitchEmbedVideo channel="camin_mccluskey" layout="video" width="100%"/>
         </div>
       </div>
