@@ -14,10 +14,10 @@ function App() {
         <h1 className="text-center cursor-default">
           Voyage
         </h1>
-        <a className="py-4 cursor-pointer text-blue-500 underline" href={WhitePaperPdf} target="_blank" rel="noreferrer">White Paper</a>
+        <a className="py-2 cursor-pointer text-blue-500 underline" href={WhitePaperPdf} target="_blank" rel="noreferrer">White Paper</a>
       </div>
       {/* Hero Value Text */}
-      <p className="text-xl text-center py-12">
+      <p className="text-center py-24 text-4xl w-2/3 mx-auto">
         {hero_text}
       </p>
       {/* Value Prop Cards */}
