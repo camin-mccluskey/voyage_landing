@@ -23,7 +23,7 @@ function App() {
       {/* Value Prop Cards */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3 mx-auto py-10">
         {problem_value_cards.map((c, idx) => {
-          return <Card icon={c.icon} title={c.title} problemText={c.problem_text} solutionText={c.solution_text}/>
+          return <Card iconName={c.icon_name} title={c.title} problemText={c.problem_text} solutionText={c.solution_text}/>
         })}
       </div>
       {/* Graph Image */}
