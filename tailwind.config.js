@@ -1,5 +1,8 @@
-// color palette generation: https://color.adobe.com/create/color-wheel
+// color palette generation: https://color.adobe.com/create/color-wheel seeded with #3b82f6
 // shade generation: https://noeldelgado.github.io/shadowlord/#3b82f6 (using 20% as the gradation)
+// 60-30-10 (primary, secondary, accent)
+
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -7,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        fadeIn: "fadeIn 2s ease-in forwards"
+        fadeIn: "fadeIn 1s ease-in forwards"
       },
       keyframes: {
         fadeIn: {
@@ -17,6 +20,8 @@ module.exports = {
       }
     },
     colors: {
+      gray: colors.trueGray,
+      white: colors.white,
       primary: {
         50: "#ffffff",
         100: "#d8e6fd", 
