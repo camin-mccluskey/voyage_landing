@@ -18,12 +18,14 @@ const cardMap = {
 
 const Card = ({iconName, title, problemText, solutionText}) => {
   return (
-    <div className={`${cardMap[iconName].bg_color} border-1 shadow-xl rounded-lg flex flex-col items-center motion-safe:animate-fadeIn p-4`}>
+    <div className={
+      `${cardMap[iconName].bg_color} border-1 shadow-md rounded-md flex flex-col items-center p-4 transistion duration-500 ease-in-out transform hover:shadow-xl hover:scale-105`
+      }>
       <img className="stroke-2" src={cardMap[iconName].icon} alt={`${title} icon`} width={60} height={60} />
       <h2 className="text-center font-bold pb-2 text-light-500 tracking-wide">{title}</h2>
       <div>
-        <p className="text-left pb-4 text-dark-900">{problemText}</p>
-        <p className="text-left text-dark-900">{solutionText}</p>
+        <p className="text-left pb-4 text-gray-300">{problemText}</p>
+        <p className="text-left text-gray-300">{solutionText}</p>
       </div>
     </div>
   )

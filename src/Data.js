@@ -3,7 +3,7 @@ const data = {
   problem_value_cards: [
     {
       icon_name: "user",
-      title: "Users",
+      title: "Identity",
       problem_text: "The social media giants have a problem with platform manipulation. Nearly half the Twitter account spreading message about coronavirus are likely bots.",
       solution_text: "Everyone on Voyage is real and referred by an existing member. No bot accounts here.",
     },
